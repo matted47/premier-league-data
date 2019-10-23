@@ -1,0 +1,78 @@
+.Match {
+    width: 100%;
+    max-width: 36rem;
+    background-color: #f7f7f7;
+    border: 1px solid #dddddd;
+    border-radius: 7px;
+    font-size: 1.8rem;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    padding: 1.6rem 4rem 2rem;
+    position: relative;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .3);
+}
+
+@media only screen and (min-width: 350px) {
+    .Match {
+        margin: 0 auto 2rem;
+    }
+}
+
+
+.Result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Match > div:nth-child(2) {
+    margin-bottom: 1.2rem;
+    
+}
+
+.Date {
+    font-size: 1.6rem;
+    color: rgb(54, 54, 54);
+    margin-bottom: 1rem;
+}
+
+.TeamName {
+    display: flex;
+    align-items: center;
+}
+
+.Badge {
+    width: 2rem;
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.Badge img {
+    width: 100%;
+    max-height: 3rem;
+}
+
+.ScheduledDate {
+    position: absolute;
+    top: 50%;
+    left: 78%;
+    transform: translateY(-50%);
+}
+
+.Winner {
+    font-weight: 600;
+}
+
+.Live {
+    color: #fff;
+    background-color: #008000;
+    font-size: 1.2rem;
+    padding: .2rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    position: absolute;
+    top: 15%;
+    left: 81%;
+}

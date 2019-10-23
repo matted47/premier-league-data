@@ -1,0 +1,12 @@
+.Main {
+    background-color: #ebebe6;
+    margin-top: 15rem;
+    padding: .8rem;
+}
+
+@media only screen and (min-width: 700px) {
+    .Main {
+        margin-top: 19rem;
+        padding: 0;
+    }
+}

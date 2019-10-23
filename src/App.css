@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  background-color: #ebebe6;
+}
+
+h1 {
+  color: #1d1d1d;
+  font-size: 3rem;
+  border-bottom: 3px solid #1d1d1d;
+  margin: 0 auto 2rem;
+  max-width: 80rem;
+}
+
+h2 {
+  font-size: 4.5rem;
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 400;
+  padding: 2rem 0 1rem;
+}
+
+button {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  background-image: linear-gradient(to bottom right, #10e2ff, #209ee7);
+  padding: 1.8rem 6rem;
+  border-radius: 1rem;
+  border: none;
+  margin: 0 auto 2rem;
+  display: block;
+}
+
+@media (hover: hover) {
+  button:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to bottom right, #209ee7, #1b84c0);
+  }
+}
+
+.Hide {
+  display: none;
+}
