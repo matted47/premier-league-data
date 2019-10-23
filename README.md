@@ -10,4 +10,4 @@ Live demo at https://matted.dev/premier-league-data/#/
 With Node & npm installed run 'npm install', then 'npm run start' in command line 
 
 To make API calls, register for a free API key here - https://www.football-data.org/
-Paste it in src/instances/axios.js replacing the placeholder text.
+Paste it in src/instances/axios.js, replacing the placeholder text
