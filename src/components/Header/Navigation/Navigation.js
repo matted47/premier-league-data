@@ -8,6 +8,7 @@ const navigation = props => (
         <ul>
             <li><NavLink to="/" exact activeClassName={classes.Active}>Table</NavLink></li>
             <li><NavLink to="/fixtures" exact activeClassName={classes.Active}>Fixtures</NavLink></li>
+            <li><NavLink to="/news" exact activeClassName={classes.Active}>News</NavLink></li>
         </ul>
     </nav>
 );

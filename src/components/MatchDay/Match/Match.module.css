@@ -14,13 +14,6 @@
     box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .3);
 }
 
-@media only screen and (min-width: 350px) {
-    .Match {
-        margin: 0 auto 2rem;
-    }
-}
-
-
 .Result {
     display: flex;
     justify-content: space-between;
@@ -29,7 +22,6 @@
 
 .Match > div:nth-child(2) {
     margin-bottom: 1.2rem;
-    
 }
 
 .Date {
@@ -75,4 +67,11 @@
     position: absolute;
     top: 15%;
     left: 81%;
+}
+
+/* 350px */
+@media only screen and (min-width: 21.87em) {
+    .Match {
+        margin: 0 auto 2rem;
+    }
 }

@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 
 import classes from './Fixtures.module.css'
-import axios from '../../instances/axios';
+import { rootData } from '../../instances/axios';
 import MatchDay from '../../components/MatchDay/MatchDay';
 import Loader from '../../components/UI/Loader/Loader'
 import Error from '../../components/UI/Error/Error';
@@ -23,11 +23,11 @@ class Fixtures extends Component {
     }
 
     componentDidMount() {
-        axios.get('competitions/2021/matches/?status=FINISHED')
+        rootData.get('competitions/2021/matches/?status=FINISHED')
             .then(response => {
                 const currentMatchDay = response.data.matches.reverse()[0].matchday;      // FIND CURRENT MATCHDAY
             
-                axios.get(`competitions/2021/matches/?matchday=${currentMatchDay}`)                   // GET GAMES FROM CURRENT MATCHDAY  
+                rootData.get(`competitions/2021/matches/?matchday=${currentMatchDay}`)                   // GET GAMES FROM CURRENT MATCHDAY  
                     .then(response => {
                         this.setState({latestMatches: [...response.data.matches], currentMatchDay: currentMatchDay, loading: false});
                     }).catch(error => {
@@ -48,7 +48,7 @@ class Fixtures extends Component {
             prevMatchDay = this.state.oldestMatchDayFetched - 1;
         }
 
-        axios.get(`competitions/2021/matches/?matchday=${prevMatchDay}`)
+        rootData.get(`competitions/2021/matches/?matchday=${prevMatchDay}`)
             .then(response => {
                 const prevMatchDays = this.state.prevMatchDays;
                 prevMatchDays.unshift(response.data.matches);
@@ -67,7 +67,7 @@ class Fixtures extends Component {
             nextMatchDay = this.state.newestMatchDayFetched + 1;
         }
 
-        axios.get(`competitions/2021/matches/?matchday=${nextMatchDay}`)
+        rootData.get(`competitions/2021/matches/?matchday=${nextMatchDay}`)
             .then(response => {
                 const nextMatchDays = this.state.nextMatchDays;
                 nextMatchDays.unshift(response.data.matches);
@@ -117,12 +117,12 @@ class Fixtures extends Component {
         return (
             <Fragment>
                 {this.state.error ? <Error /> : null}
-                <button onClick={this.loadPastGamesHandler.bind(this)} className={pastGameStyle}>Past Games</button>
+                <button onClick={this.loadPastGamesHandler.bind(this)} className={classes.Btn}>Past Games</button>
                 {pastGames}
                 <h1 className={classes.Heading}>Latest Results</h1>
                 {currentMatchDay}
                 {nextGames}
-                <button onClick={this.loadNextGamesHandler.bind(this)} className={nextGameStyle}>Next Games</button>
+                <button onClick={this.loadNextGamesHandler.bind(this)} className={classes.Btn}>Next Games</button>
                 
             </Fragment>
         );

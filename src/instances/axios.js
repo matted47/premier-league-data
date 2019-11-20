@@ -1,8 +1,13 @@
 import axios from 'axios';
 
-const rootInstance = axios.create({
+const rootData = axios.create({
     baseURL: 'https://cors-anywhere.herokuapp.com/https://api.football-data.org/v2/'
 });
-rootInstance.defaults.headers.common['X-Auth-Token'] = 'get your API Key from https://www.football-data.org/';
+rootData.defaults.headers.common['X-Auth-Token'] = 'Register for your free API Key and paste it here - https://www.football-data.org/';
 
-export default rootInstance;
+const newsData = axios.create({
+    baseURL: 'https://cors-anywhere.herokuapp.com/https://content.guardianapis.com/'
+});
+newsData.defaults.headers.common['api-key'] = 'Register for your free API Key and paste it here - https://open-platform.theguardian.com/access/';
+
+export { rootData, newsData };

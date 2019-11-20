@@ -1,0 +1,75 @@
+.Card {
+    display: flex;
+    align-items: center;
+    padding: 2rem 1rem;
+    background-color: #f7f7f7;
+    border: 1px solid #dddddd;
+    border-radius: 7px;
+    margin-bottom: .5rem;
+}
+
+.Img {
+    width: 10rem;
+    min-width: 10rem;
+    margin-right: 2rem;
+}
+
+.Img img {
+    width: 100%;
+}
+
+.Info {
+    display: flex;
+    flex-direction: column;
+}
+
+.Info > * {
+    color: #000;
+}
+
+.Info div:first-child {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.Info div:nth-child(2) {
+    font-size: 1.4rem;
+    color: rgb(95, 95, 95);
+    margin-top: 5px;
+}
+
+.Link {
+    text-decoration: none;
+    font-family: 'Domine', sans-serif;
+}
+
+@media (hover: hover) {
+    .Link {
+        cursor: pointer;
+    }
+}
+
+/* 500px */
+@media only screen and (min-width: 31.25em) {
+    .Card {
+        max-width: 50rem;
+        margin: 1rem auto;
+    }
+
+    .Info div:first-child,
+    .Info div:nth-child(2) {
+        font-size: 1.6rem;
+    }
+}
+
+/* 700px */
+@media only screen and (min-width: 43.75em) {
+    .Card {
+        min-height: 14rem;
+    }
+
+    .Link {
+        max-width: none;
+        width: 49%;
+    }
+}

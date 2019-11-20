@@ -1,0 +1,170 @@
+.Article {
+    background-color: #fff;
+    margin-top: -2rem;
+    padding: 1rem 0;
+}
+
+.Article > * {
+    padding: 0 1rem;
+}
+
+.Headline {
+    font-family: 'Domine', serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.Date {
+    font-family: 'Domine', sans-serif;
+    font-size: 1.8rem;
+    text-align: right;
+    margin-bottom: .5rem;
+    color: rgb(95, 95, 95);
+}
+
+.Thumbnail {
+    width: 100%;
+    padding: 0;
+}
+
+.TrailText {
+    font-size: 1.4rem;
+    font-family: 'Domine', serif;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.Body {
+    margin-top: 2rem;
+}
+
+.Body * {
+    text-align: left;
+}
+
+.Body h2 {
+    font-size: 1.8rem;
+    margin: 4rem 0 1rem;
+}
+
+.Body p {
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.Body p a {
+    color: #000;
+    font-weight: 500;
+}
+
+.Article figure {
+    padding: 0;
+}
+
+.Article figure img {
+    width: 100%;
+    height: auto;
+    padding: 0;
+}
+
+figcaption {
+    font-size: 1.4rem;
+}
+
+iframe {
+    width: 100%;
+    height: auto;
+}
+
+aside, .element-embed {
+    margin: 3rem 0;
+}
+
+figure iframe {
+    min-height: 26rem;
+    margin: 2rem 0;
+}
+
+.BackBtn {
+    position: fixed;
+    width: 100%;
+    max-width: 70rem;
+    height: 4.8rem;
+    background-color: #f2f2f2;
+    left: 0;
+    top: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    z-index: 800;
+}
+
+figure:last-of-type iframe {
+    height: 6rem;
+    min-height: 0;
+}
+
+ol li ol li {
+    background-color: #f2f2f2;
+}
+
+/* 500px */
+@media only screen and (min-width: 31.25em) {
+    .Article {
+        max-width: 70rem;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .Headline {
+        margin-bottom: 2rem;
+    }
+
+    .TrailText,
+    figcaption {
+        font-size: 1.6rem;
+    }
+
+    figcaption {
+        margin-bottom: 2rem;
+    }
+
+    .Body p {
+        font-size: 2rem;
+    }
+
+    figure iframe {
+        min-height: 32rem;
+    }
+}
+
+@media (hover: hover) {
+    .BackBtn {
+        cursor: pointer;
+    }
+}
+
+/* 700px */
+@media only screen and (min-width: 43.75em) {
+    .Headline {
+        font-size: 4.4rem;
+    }
+
+    .Body p {
+        font-size: 2.2rem;
+    }
+
+    figure iframe {
+        min-height: 36rem;
+    }
+
+    .BackBtn {
+        top: 10rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

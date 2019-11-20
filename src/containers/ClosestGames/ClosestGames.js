@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 
-import axios from '../../instances/axios';
+import { rootData } from '../../instances/axios';
 import Match from '../../components/MatchDay/Match/Match';
 import badges from '../../imports/badges';
 import shortenClubName from '../../imports/shortenClubName';
@@ -16,11 +16,11 @@ class ClosestGames extends Component {
 
     componentDidMount() {
         let games = [];
-        axios.get(`teams/${this.props.team}/matches/?status=FINISHED`)
+        rootData.get(`teams/${this.props.team}/matches/?status=FINISHED`)
             .then(response => {
                 games.push(response.data.matches.slice(-1)[0]);
                 
-                axios.get(`teams/${this.props.team}/matches/?status=SCHEDULED&limit=3`)
+                rootData.get(`teams/${this.props.team}/matches/?status=SCHEDULED&limit=3`)
                     .then(response => {
                         response.data.matches.forEach(cur => {
                             if (cur.competition.name === 'Premier League' && games.length === 1) {
