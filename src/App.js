@@ -18,6 +18,7 @@ import NewsArticle from './containers/NewsArticle/NewsArticle';
 class App extends Component {
   state = {
     tableData: [],
+    renderWelcomeAnimation: true,
     error: false
   }
   componentDidMount() {
@@ -35,6 +36,10 @@ class App extends Component {
     }).catch(error => {
       this.setState({error: true});
     });
+
+    setTimeout(() => {
+      this.setState({ renderWelcomeAnimation: false});
+    }, 4000);
   }
   
   render() {
@@ -59,7 +64,7 @@ class App extends Component {
 
     return (
       <Fragment>
-        <LoaderWelcome/>
+        {this.state.renderWelcomeAnimation ? <LoaderWelcome/> : null }
         <HashRouter basename="/premier-league-data">
           
           {display}
