@@ -15,22 +15,21 @@
     align-items: center;   
 }
 
-@media only screen and (min-width: 700px) {
-    .Banner {
-        height: 10rem;
-    }
-}
-
 .Logo {
     width: 14rem;
 }
 
-@media only screen and (min-width: 700px) {
+.Logo img {
+    width: 100%;
+}
+
+/* 700px */
+@media only screen and (min-width: 43.75em) {
+    .Banner {
+        height: 10rem;
+    }
+
     .Logo {
         width: 22rem;
     }
-}
-
-.Logo img {
-    width: 100%;
 }

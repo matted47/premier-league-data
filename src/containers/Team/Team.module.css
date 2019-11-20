@@ -3,16 +3,6 @@
     font-size: 1.6rem;
 }
 
-@media only screen and (min-width: 950px) {
-    .Team {
-        width: 82rem;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-}
-
 .HeadingWrapper {
     flex: 1 0 100%;
 }
@@ -46,4 +36,45 @@
 
 .Brief div:first-child {
     margin-bottom: 1rem;
+}
+
+.BackBtn {
+    position: fixed;
+    width: 100%;
+    max-width: 70rem;
+    height: 4.8rem;
+    background-color: #f2f2f2;
+    left: 0;
+    top: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    z-index: 800;
+}
+
+@media (hover: hover) {
+    .BackBtn {
+        cursor: pointer;
+    }
+}
+
+/* 700px */
+@media only screen and (min-width: 43.75em) {
+    .BackBtn {
+        top: 10rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* 950px */
+@media only screen and (min-width: 59.37em) {
+    .Team {
+        width: 82rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 }

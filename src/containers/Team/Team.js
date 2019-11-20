@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
-import axios from '../../instances/axios';
+import { rootData } from '../../instances/axios';
 import badges from '../../imports/badges';
 import shortenClubName from '../../imports/shortenClubName';
 import TeamList from '../../components/TeamList/TeamList'
@@ -16,7 +16,8 @@ class Team extends Component {
     }
 
     componentDidMount() {
-        axios.get(`teams/${this.props.match.params.team}`)
+        console.log(this.props);
+        rootData.get(`teams/${this.props.match.params.team}`)
             .then(response => {
                 let manager;
                 response.data.squad.forEach(cur => {
@@ -69,11 +70,18 @@ class Team extends Component {
 
         
         return (
-            <div className={classes.Team}>
-                {heading}
-                {closestGames}
-                {teamList}
-            </div>
+            <Fragment>
+                <button
+                className={classes.BackBtn} 
+                onClick={() => this.props.history.goBack()}>
+                    &larr; Back to Table
+                </button>
+                <div className={classes.Team}>
+                    {heading}
+                    {closestGames}
+                    {teamList}
+                </div>
+            </Fragment>
         );
     }
 }

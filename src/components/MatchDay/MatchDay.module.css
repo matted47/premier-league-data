@@ -4,18 +4,13 @@ p {
     text-align: center;
 }
 
-/* @media only screen and (min-width: 350px) {
-    p {
-        text-align: left;
-    }
-} */
-
 .ListContainer {
     max-width: 80rem;
     margin: 0 auto 7rem;
 }
 
-@media only screen and (min-width: 720px) {
+/* 720px */
+@media only screen and (min-width: 45em) {
     .ListContainer {
         display: flex;
         flex-wrap: wrap;
