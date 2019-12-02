@@ -4,7 +4,7 @@ import { HashRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import { rootData } from './instances/axios';
 import Layout from './containers/Layout/Layout';
-import Table from './containers/Table/Table';
+import Table from './components/Table/Table';
 import Loader from './components/UI/Loader/Loader';
 import Fixtures from './containers/Fixtures/Fixtures';
 import badges from './imports/badges';

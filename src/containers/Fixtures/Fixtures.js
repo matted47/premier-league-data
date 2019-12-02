@@ -110,6 +110,7 @@ class Fixtures extends Component {
             }
         }
 
+        // Hide past & next game buttons if at the start or end of season respectively
         const pastGameStyle = this.state.oldestMatchDayFetched === 1 ? 'Hide' : null;
         const nextGameStyle = this.state.newestMatchDayFetched === 38 ? 'Hide' : null;
         
@@ -117,12 +118,12 @@ class Fixtures extends Component {
         return (
             <Fragment>
                 {this.state.error ? <Error /> : null}
-                <button onClick={this.loadPastGamesHandler.bind(this)} className={classes.Btn}>Past Games</button>
+                <button onClick={this.loadPastGamesHandler.bind(this)} className={`${classes.Btn} ${pastGameStyle}`}>Past Games</button>
                 {pastGames}
                 <h1 className={classes.Heading}>Latest Results</h1>
                 {currentMatchDay}
                 {nextGames}
-                <button onClick={this.loadNextGamesHandler.bind(this)} className={classes.Btn}>Next Games</button>
+                <button onClick={this.loadNextGamesHandler.bind(this)} className={`${classes.Btn} ${nextGameStyle}`}>Next Games</button>
                 
             </Fragment>
         );

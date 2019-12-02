@@ -13,10 +13,6 @@ class News extends Component {
     componentDidMount() {
         newsData.get('search?tag=football%2Fpremierleague&show-fields=thumbnail').then(response => {
             this.setState({stories: response.data.response.results});
-            // this.state.stories.forEach(cur => {
-            //     console.log(cur.blocks.main.elements[0].assets[0].file);
-            // });
-            console.log(this.state);
         });
     }
 

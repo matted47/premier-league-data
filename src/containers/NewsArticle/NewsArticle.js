@@ -15,10 +15,6 @@ class NewsArticle extends Component {
 
                 const date = this.formattedDate(response.data.response.results[0].webPublicationDate);
 
-                console.log(date);
-
-                //const month = date.toLocaleString('default', { month: 'long' });
-
                 this.setState({
                     headline: data.headline,
                     trailText: data.trailText,
@@ -30,18 +26,23 @@ class NewsArticle extends Component {
     }
 
     formattedDate(oldDate) {
-        // Format date and get timestamp             RESULT - Fri Nov 15 2019 00:00:00 GMT+0000 (Greenwich Mean Time)
-        const dateSplit = new Date(oldDate.substring(0, 10).split('-').join(','));
+        // Format date and get timestamp          RESULT - Fri Nov 01 2019 00:00:00 GMT+0000 (Greenwich Mean Time)
+        const dateSplit = new Date(oldDate.substring(0, 10));
 
-        // Get date only & split                     RESULT - ["Fri", "Nov", "15", "2019"]
+        // Get date only & split                  RESULT - ["Fri", "Nov", "01", "2019"]
         const dateArr = dateSplit.toDateString().split(' ');
 
-        // Reverse Day & Month                       RESULT - ["Fri", "15", "Nov", "2019"]
-        const dateReversed = dateArr.splice(1, 2).reverse();
+        // Reverse Day & Month, removing the first zero from day if it exists   RESULT - ["Fri", "1", "Nov", "2019"]
+        const dateReversed = dateArr.splice(1, 2).reverse();   
+
+        if (dateReversed[0].split('')[0] === '0') {
+          dateReversed[0] = dateReversed[0].split('')[1];  // Remove '0' from start if it exists
+        }
+
         dateReversed.unshift(dateArr[0]);
         dateReversed.push(dateArr[1]);
         
-        // Join & return                             RESULT 'Fri 15 Nov 2019'
+        // Join & return                           RESULT 'Fri 01 Nov 2019'
         const newDate = dateReversed.join(' ');
         return newDate;
     }
@@ -54,7 +55,7 @@ class NewsArticle extends Component {
                 <div className={classes.Article}>
                     <div className={classes.Headline}>{this.state.headline}</div>
                     <div className={classes.Date}>{this.state.date}</div>
-                    <img className={classes.Thumbnail} src={this.state.thumbnail} alt="article image" />
+                    <img className={classes.Thumbnail} src={this.state.thumbnail} alt={this.state.trailText} />
                     <div className={classes.TrailText}>{this.state.trailText}</div>
                     <div className={classes.Body} dangerouslySetInnerHTML={{ __html: this.state.body }} />
                 </div>

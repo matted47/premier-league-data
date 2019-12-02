@@ -16,7 +16,6 @@ class Team extends Component {
     }
 
     componentDidMount() {
-        console.log(this.props);
         rootData.get(`teams/${this.props.match.params.team}`)
             .then(response => {
                 let manager;
