@@ -10,12 +10,16 @@ import ClosestGames from '../ClosestGames/ClosestGames';
 import Error from '../../components/UI/Error/Error';
 
 class Team extends Component {
+  _isMounted = false;
+
   state = {
     loaded: false,
     error: false
   }
 
   componentDidMount() {
+    this._isMounted = true;
+
     rootData.get(`teams/${this.props.match.params.team}`)
       .then(response => {
         let manager;
@@ -25,15 +29,23 @@ class Team extends Component {
           }
         });
         const badge = shortenClubName(response.data.name);
-          this.setState({
-            ...response.data,
-            manager: manager,
-            badge: badge,
-            loaded: true
-          });
+          if (this._isMounted) {
+            this.setState({
+              ...response.data,
+              manager: manager,
+              badge: badge,
+              loaded: true
+            });
+          }
       }).catch(err => {
-        this.setState({error: true});
+        if (this._isMounted) {
+          this.setState({error: true});
+        }
       });
+  }
+
+  componentWillUnmount() {
+    this._isMounted = false;
   }
 
   render() {
