@@ -1,53 +1,53 @@
 .LoaderWelcome {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: 600;
-    top: 0;
-    left: 0;
-    background-color: #35003B;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 3rem;
-    animation: wipeout .3s linear 2.5s;
-    animation-fill-mode: forwards;  
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 900;
+  top: 0;
+  left: 0;
+  background-color: #35003B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 3rem;
+  animation: wipeout .3s linear 2.5s;
+  animation-fill-mode: forwards;  
 }
 
 .Logo {
-    animation: scale 3s ease-in;
+  animation: scale 3s ease-in;
 }
 
 .Logo img {
-    width: 100%;
+  width: 100%;
 }
 
 @keyframes wipeout {
-    0% {
-        clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
-        -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
-        -moz-clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
-        -o-clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
-    }
-    50% {
-        clip-path: polygon(0% 0%, 0% 50%, 100% 30%, 100% 0%);
-        -webkit-clip-path: polygon(0% 0%, 0% 50%, 100% 30%, 100% 0%);
-        -moz-clip-path: polygon(0% 0%, 0% 50%, 100% 30%, 100% 0%);
-        -o-clip-path: polygon(0% 0%, 0% 50%, 100% 30%, 100% 0%);
-    }
-    100% {
-        clip-path: polygon(0% 0%, 0% 0%, 100% 0%, 100% 0%);
-        -webkit-clip-path: polygon(0% 0%, 0% 0%, 100% 0%, 100% 0%);
-        -moz-clip-path: polygon(0% 0%, 0% 0%, 100% 0%, 100% 0%);
-        -o-clip-path: polygon(0% 0%, 0% 0%, 100% 0%, 100% 0%);
-    }
+  0% {
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+    -moz-clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+    -o-clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+  }
+  50% {
+    clip-path: polygon(0% 0%, 0% 50%, 100% 30%, 100% 0%);
+    -webkit-clip-path: polygon(0% 0%, 0% 50%, 100% 30%, 100% 0%);
+    -moz-clip-path: polygon(0% 0%, 0% 50%, 100% 30%, 100% 0%);
+    -o-clip-path: polygon(0% 0%, 0% 50%, 100% 30%, 100% 0%);
+  }
+  100% {
+    clip-path: polygon(0% 0%, 0% 0%, 100% 0%, 100% 0%);
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 100% 0%, 100% 0%);
+    -moz-clip-path: polygon(0% 0%, 0% 0%, 100% 0%, 100% 0%);
+    -o-clip-path: polygon(0% 0%, 0% 0%, 100% 0%, 100% 0%);
+  }
 }
 
 @keyframes scale {
-    0% {
-        transform: scale(0.8);
-    }
-    100% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

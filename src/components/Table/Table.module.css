@@ -1,87 +1,87 @@
 p {
-    font-size: 2rem;
-    text-align: center;
-    font-weight: 300;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 300;
 }
 
 .Wrapper {
-    margin-top: 4rem;
+  margin-top: 4rem;
 }
 
 
 
 /* Table Styles */
 .Table {
-    width: 100%;
-    min-width: 280px;
-    border-collapse: collapse;
-    overflow-x: scroll;
+  width: 100%;
+  min-width: 280px;
+  border-collapse: collapse;
+  overflow-x: scroll;
 }
 
 .Table tr:first-child {
-    height: 3rem;
+  height: 3rem;
 }
 
 .Table th {
-    font-size: 1.4rem;
-    color: #525252;
-    font-weight: 400;
+  font-size: 1.4rem;
+  color: #525252;
+  font-weight: 400;
 }
 
 .Table th:nth-child(2) {
-    text-align: left;
-    padding-left: 2rem;
+  text-align: left;
+  padding-left: 2rem;
 }
 
 .Table th:last-child {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .Table tbody a {
-    display: table-row;
-    width: 100%;
+  display: table-row;
+  width: 100%;
 }
 
 .Table a tr {
-    width: 100%;
+  width: 100%;
 }
 
 .Table tr td {
-    max-height: 2.3rem;
-    padding: 1.2rem 0;
-    font-size: 1.8rem;
-    font-weight: 300;
-    text-align: center;
+  max-height: 2.3rem;
+  padding: 1.2rem 0;
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-align: center;
 }
 
 .Table tr td div {
-    width: 2rem;
-    display: inline-block;
-    margin-right: 1rem;
-    vertical-align: middle;
+  width: 2rem;
+  display: inline-block;
+  margin-right: 1rem;
+  vertical-align: middle;
 }
 
 .Table tr td div img {
-    width: 100%;
-    max-height: 3rem;
-    display: block;
+  width: 100%;
+  max-height: 3rem;
+  display: block;
 }
 
 .Table tbody tr:nth-child(odd) {
-    background-color: #f4f4f1;
+  background-color: #f4f4f1;
 }
 
 .Table tr td:nth-child(2) {
-    text-align: left;
+  text-align: left;
 }
 
 .Table tr td:last-child {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .Table td a {
-    text-decoration: none;
-    color: #000;
+  text-decoration: none;
+  color: #000;
 }
 
 
@@ -94,7 +94,7 @@ p {
 .Table tr td:nth-child(7),
 .Table tr td:nth-child(8),
 .Table tr td:nth-child(9) {
-    display: none;
+  display: none;
 }
 
 
@@ -103,47 +103,47 @@ p {
 
 /* Key Styles */
 .Table tbody tr:nth-child(n):nth-child(-n+4){
-    border-left: 3px solid rgb(53, 114, 247);
+  border-left: 3px solid rgb(53, 114, 247);
 }
 
 .Table tbody tr:nth-child(5) {
-    border-left: 3px solid rgb(226, 155, 49);
+  border-left: 3px solid rgb(226, 155, 49);
 }
 
 .Table tbody tr:nth-child(n+18):nth-child(-n+20) {
-    border-left: 3px solid rgb(196, 51, 51);
+  border-left: 3px solid rgb(196, 51, 51);
 }
 
 .Key h3 {
-    text-align: left;
+  text-align: left;
 }
 
 .Key p {
-    font-size: 1.6rem;
-    text-align: left
+  font-size: 1.6rem;
+  text-align: left
 }
 
 .Key > div {
-    display: flex;
-    align-items: baseline;
+  display: flex;
+  align-items: baseline;
 }
 
 .Blue,
 .Orange,
 .Red {
-    width: 1rem;
-    height: 1rem;
-    margin-right: 1rem;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 1rem;
 }
 
 .Blue {
-    background-color: rgb(53, 114, 247);
+  background-color: rgb(53, 114, 247);
 }
 .Orange {
-    background-color: rgb(226, 155, 49);
+  background-color: rgb(226, 155, 49);
 }
 .Red {
-    background-color: rgb(196, 51, 51);
+  background-color: rgb(196, 51, 51);
 }
 
 
@@ -151,35 +151,35 @@ p {
 
 /* 350px */
 @media only screen and (min-width: 21.87) {
-    .Table th {
-        min-width: 3rem;
-    }
+  .Table th {
+    min-width: 3rem;
+  }
 }
 
 /* 500px */
 @media only screen and (min-width: 31.25) {
-    .Table tr th:nth-child(7),
-    .Table tr th:nth-child(8),
-    .Table tr th:nth-child(9),
-    .Table tr td:nth-child(7),
-    .Table tr td:nth-child(8),
-    .Table tr td:nth-child(9) {
-        display: table-cell;
-    }
+  .Table tr th:nth-child(7),
+  .Table tr th:nth-child(8),
+  .Table tr th:nth-child(9),
+  .Table tr td:nth-child(7),
+  .Table tr td:nth-child(8),
+  .Table tr td:nth-child(9) {
+    display: table-cell;
+  }
 }
 
 /* 700px */
 @media only screen and (min-width: 43.75em) {
-    .Wrapper {
-        width: 70rem;
-        margin: 2rem auto 0;
-        border: 1px solid #dadada;
-        padding: 1rem .5rem;
-        border-radius: 5px;
-    }
+  .Wrapper {
+    width: 70rem;
+    margin: 2rem auto 0;
+    border: 1px solid #dadada;
+    padding: 1rem .5rem;
+    border-radius: 5px;
+  }
 
-    .Key {
-        width: 70rem;
-        margin: 0 auto;
-    }
+  .Key {
+    width: 70rem;
+    margin: 0 auto;
+  }
 }

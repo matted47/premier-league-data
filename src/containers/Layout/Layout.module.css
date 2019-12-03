@@ -1,12 +1,12 @@
 .Main {
-    background-color: #ebebe6;
-    margin-top: 15rem;
+  background-color: #ebebe6;
+  margin-top: 15rem;
 }
 
 /* 700px */
 @media only screen and (min-width: 43.75em) {
-    .Main {
-        margin-top: 19rem;
-        padding: 0;
-    }
+  .Main {
+    margin-top: 19rem;
+    padding: 0;
+  }
 }

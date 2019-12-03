@@ -1,52 +1,52 @@
 .Squad {
-    text-align: center;
-    position: relative;
-    z-index: 100;
+  text-align: center;
+  position: relative;
+  z-index: 100;
 }
 
 .TableWrapper {
-    border-radius: 10px;
-    border: 1px solid #525252;
-    display: inline-block;
+  border-radius: 10px;
+  border: 1px solid #525252;
+  display: inline-block;
 }
 
 h3 {
-    text-align: center;
+  text-align: center;
 }
 
 .Table {
-    text-align: left;
-    border-collapse: collapse;
-    background-color: #f4f4f1;
-    border-radius: 10px;
+  text-align: left;
+  border-collapse: collapse;
+  background-color: #f4f4f1;
+  border-radius: 10px;
 }
 
 
 .Table thead th {
-    padding: 2rem .5rem;
+  padding: 2rem .5rem;
 }
 
 .Table thead th:last-child {
-    text-align: center;
+  text-align: center;
 }
 
 .Table tr {
-    padding: 0 2rem;
+  padding: 0 2rem;
 }
 
 .Heading td {
-    font-weight: 800;
-    background-color: #f4f4f4;
-    padding: 1.5rem 2rem !important;
+  font-weight: 800;
+  background-color: #f4f4f4;
+  padding: 1.5rem 2rem !important;
 }
 
 
 .Table td {
-    padding: .8rem .5rem;
-    color: #424242;
-    border-top: 1px solid #a1a1a1;
+  padding: .8rem .5rem;
+  color: #424242;
+  border-top: 1px solid #a1a1a1;
 }
 
 .Table tbody td:last-child {
-    text-align: center;
+  text-align: center;
 }

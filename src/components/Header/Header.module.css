@@ -1,35 +1,35 @@
 .Header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 500;
-    /* background-color: #d3d3d0; */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  /* background-color: #d3d3d0; */
 }
 
 .Banner {
-    background-color: #37003c;
-    height: 7rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;   
+  background-color: #37003c;
+  height: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;   
 }
 
 .Logo {
-    width: 14rem;
+  width: 14rem;
 }
 
 .Logo img {
-    width: 100%;
+  width: 100%;
 }
 
 /* 700px */
 @media only screen and (min-width: 43.75em) {
-    .Banner {
-        height: 10rem;
-    }
+  .Banner {
+    height: 10rem;
+  }
 
-    .Logo {
-        width: 22rem;
-    }
+  .Logo {
+    width: 22rem;
+  }
 }

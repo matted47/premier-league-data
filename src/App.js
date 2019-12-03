@@ -27,10 +27,10 @@ class App extends Component {
       ////// FILTER DATA \\\\\\
       const data = response.data.standings[0].table;
       data.forEach((cur,ind) => {
-          cur.club = shortenClubName(cur.team.name);
-          cur.badge = badges[cur.club];
-          cur.teamID = cur.team.id;
-          delete cur.team;
+        cur.club = shortenClubName(cur.team.name);
+        cur.badge = badges[cur.club];
+        cur.teamID = cur.team.id;
+        delete cur.team;
       });
       this.setState({tableData: data});
     }).catch(error => {
@@ -49,16 +49,16 @@ class App extends Component {
       display = <Error />;
     } else if (this.state.tableData.length) {
       display = (
-          <Layout>
-            <Switch>
-              <Route path="/" exact render={(props) => <Table {...this.state} />} />
-              <Route path="/fixtures" exact component={Fixtures} />
-              <Route path="/news" exact component={News} />
-              <Route path="/news/:article" component={NewsArticle} />
-              <Route path="/teams/:team" component={Team} />
-              <Route render={() => <p>Page not found.<br/>Please use the links above.</p>}/>
-            </Switch>
-          </Layout>
+        <Layout>
+          <Switch>
+            <Route path="/" exact render={(props) => <Table {...this.state} />} />
+            <Route path="/fixtures" exact component={Fixtures} />
+            <Route path="/news" exact component={News} />
+            <Route path="/news/:article" component={NewsArticle} />
+            <Route path="/teams/:team" component={Team} />
+            <Route render={() => <p>Page not found.<br/>Please use the links above.</p>}/>
+          </Switch>
+        </Layout>
       );
     }
 
@@ -66,7 +66,6 @@ class App extends Component {
       <Fragment>
         {this.state.renderWelcomeAnimation ? <LoaderWelcome/> : null }
         <HashRouter basename="/premier-league-data">
-          
           {display}
         </HashRouter>
       </Fragment>

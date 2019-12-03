@@ -6,48 +6,57 @@ import Loader from '../../components/UI/Loader/Loader';
 import classes from './News.module.css';
 
 class News extends Component {
-    state = {
-        stories: []
-    }
+  _isMounted = false;
 
-    componentDidMount() {
-        newsData.get('search?tag=football%2Fpremierleague&show-fields=thumbnail').then(response => {
-            this.setState({stories: response.data.response.results});
-        });
-    }
+  state = {
+    stories: []
+  }
 
-    render() {
-        let news = <Loader />
+  componentDidMount() {
+    this._isMounted = true;
+    newsData.get('search?tag=football%2Fpremierleague&show-fields=thumbnail').then(response => {
+      if (this._isMounted) {
+        this.setState({stories: response.data.response.results});
+      }
+    });
+  }
 
-        // Once AJAX call is complete
-        if (this.state.stories.length) {
-            news = this.state.stories.map((cur, ind) => {
-                // Split headline & author if present
-                let title, author;
-                if (cur.webTitle.includes('|')) {
-                    const ind = cur.webTitle.indexOf('|');
-                    author = cur.webTitle.substring(ind);
-                    title = cur.webTitle.substring(0, ind);
-                } else {
-                    title = cur.webTitle;
-                }
+  componentWillUnmount() {
+    this._isMounted = false;
+  }
 
-                return <NewsCard 
-                        img={cur.fields.thumbnail}
-                        title={title}
-                        author={author}
-                        fullArticleLink={cur.apiUrl}
-                        key={cur.id}
-                       />;
-            });
+  render() {
+    let news = <Loader />
+
+    // Once AJAX call is complete
+    if (this.state.stories.length) {
+      news = this.state.stories.map((cur, ind) => {
+        // Split headline & author if present
+        let title, author;
+        if (cur.webTitle.includes('|')) {
+          const ind = cur.webTitle.indexOf('|');
+          author = cur.webTitle.substring(ind);
+          title = cur.webTitle.substring(0, ind);
+        } else {
+          title = cur.webTitle;
         }
 
-        return (
-                <div className={classes.NewsContainer}>
-                    {news}
-                </div>
-            );
+        return <NewsCard 
+          img={cur.fields.thumbnail}
+          title={title}
+          author={author}
+          fullArticleLink={cur.apiUrl}
+          key={cur.id}
+          />;
+      });
     }
+
+    return (
+      <div className={classes.NewsContainer}>
+        {news}
+      </div>
+    );
+  }
 }
 
 export default News;

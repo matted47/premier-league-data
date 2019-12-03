@@ -1,13 +1,13 @@
 .Error {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 400;
-    background-color: #ebebe6;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 400;
+  background-color: #ebebe6;
 }
 
 .Error p {
-    margin-top: 20rem;
+  margin-top: 20rem;
 }

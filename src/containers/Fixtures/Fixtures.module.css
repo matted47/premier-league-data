@@ -1,31 +1,31 @@
 .Btn {
-    color: #fff;
-    font-size: 1.6rem;
-    font-weight: 600;
-    background-image: linear-gradient(to bottom right, #10e2ff, #209ee7);
-    padding: 1.8rem 6rem;
-    border-radius: 1rem;
-    border: none;
-    margin: 0 auto 2rem;
-    display: block;
-  }
-  
-  @media (hover: hover) {
-    .Btn:hover {
-      cursor: pointer;
-      background-image: linear-gradient(to bottom right, #209ee7, #1b84c0);
-    }
-  }
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  background-image: linear-gradient(to bottom right, #10e2ff, #209ee7);
+  padding: 1.8rem 6rem;
+  border-radius: 1rem;
+  border: none;
+  margin: 0 auto 2rem;
+  display: block;
+}
 
-  /* 500px */
-  @media only screen and (min-width: 31.25em) {
-    .Heading {
-        width: 45rem;
-    }
+@media (hover: hover) {
+  .Btn:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to bottom right, #209ee7, #1b84c0);
+  }
+}
+
+/* 500px */
+@media only screen and (min-width: 31.25em) {
+  .Heading {
+    width: 45rem;
+  }
 }
 /* 720px */
 @media only screen and (min-width: 45em) {
-    .Heading {
-        width: 80rem;
-    }
+  .Heading {
+    width: 80rem;
+  }
 }
